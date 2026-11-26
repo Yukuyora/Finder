@@ -1,1 +1,183 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finder — Find Your Next Opportunity</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #050b14;
+      color: #e6f1ff;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 8%;
+      border-bottom: 1px solid #14253a;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #a8d5ff;
+    }
+
+    .header-tag {
+      font-size: 11px;
+      color: #6485aa;
+      letter-spacing: 2px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      color: #5daeff;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      color: #829bb8;
+      font-size: 16px;
+      margin-bottom: 55px;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .choice {
+      background: #0a1524;
+      border: 1px solid #203a57;
+      border-radius: 12px;
+      padding: 30px;
+      cursor: pointer;
+      transition: 0.2s;
+      text-align: left;
+      color: inherit;
+    }
+
+    .choice:hover {
+      border-color: #5daeff;
+      background: #0d1d30;
+      transform: translateY(-3px);
+    }
+
+    .choice h2 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .choice p {
+      color: #829bb8;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .arrow {
+      display: block;
+      color: #5daeff;
+      font-size: 22px;
+      margin-top: 30px;
+    }
+
+    footer {
+      text-align: center;
+      color: #405975;
+      font-size: 11px;
+      letter-spacing: 2px;
+      padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 65px auto;
+      }
+
+      .choices {
+        grid-template-columns: 1fr;
+      }
+
+      .header-tag {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">FINDER</div>
+    <div class="header-tag">SKILLS / OPPORTUNITIES</div>
+  </header>
+
+  <main>
+    <div class="eyebrow">01 — LET'S GET STARTED</div>
+
+    <h1>What brings<br>you here?</h1>
+
+    <p class="description">
+      Find the right people. Find the right opportunity.
+    </p>
+
+    <div class="choices">
+
+      <button class="choice" onclick="choosePath('apply')">
+        <h2>I'm looking for work</h2>
+        <p>Discover opportunities that match your skills.</p>
+        <span class="arrow">↗</span>
+      </button>
+
+      <button class="choice" onclick="choosePath('hire')">
+        <h2>I need someone skilled</h2>
+        <p>Find available people for your job or project.</p>
+        <span class="arrow">↗</span>
+      </button>
+
+    </div>
+  </main>
+
+  <footer>
+    TWO SIDES. ONE NETWORK.
+  </footer>
+
+  <script>
+    function choosePath(path) {
+      if (path === "apply") {
+        alert("Welcome to Finder. Let's find you work.");
+      } else {
+        alert("Welcome to Finder. Let's find your skilled worker.");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
